@@ -35,4 +35,5 @@ def generate_image(prompt, filename="result.jpg"):
     image_data = requests.get(image_url).content
     with open(filename, "wb") as file:
         file.write(image_data)
+        
     return image_url
