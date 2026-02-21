@@ -21,7 +21,7 @@ def generate_image(prompt, filename="result.jpg"):
     payload = {
         "height": 1024,
         "width": 1024,
-        "modelId": "6bef9f1b-29cb-40c7-b9df-32b51c1f67d3",
+        "modelId": "7b592283-e8a7-4c5a-9ba6-d18c31f258b9",
         "prompt": prompt
     }
     response = requests.post(url, json=payload, headers=headers)
@@ -35,5 +35,5 @@ def generate_image(prompt, filename="result.jpg"):
     image_data = requests.get(image_url).content
     with open(filename, "wb") as file:
         file.write(image_data)
-        
+
     return image_url
